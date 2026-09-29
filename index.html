@@ -148,7 +148,7 @@
                 
                 <!-- Bride (Bottom Right Offset) -->
                 <div class="w-full text-center text-[15vh] pl-[18vw] leading-none">
-                    Thanh Thủy
+                    Thanh Thúy
                 </div>
             </div>
 
@@ -207,12 +207,27 @@
             ];
             let currentSlideIndex = 0;
 
-            // Switch slides every 5000ms (5 seconds)
-            setInterval(() => {
+            // Define custom durations for each slide (in milliseconds)
+            // Slide 1 (Names): 8000ms (8 seconds)
+            // Slide 2 (Thank You): 5000ms (5 seconds)
+            const slideDurations = [8000, 5000]; 
+
+            function switchSlide() {
+                // Fade out current slide
                 slides[currentSlideIndex].classList.remove('active');
+                
+                // Advance to the next slide index
                 currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                
+                // Fade in the new slide
                 slides[currentSlideIndex].classList.add('active');
-            }, 5000);
+                
+                // Schedule the next transition based on the new slide's duration
+                setTimeout(switchSlide, slideDurations[currentSlideIndex]);
+            }
+
+            // Start the initial timer using Slide 1's duration
+            setTimeout(switchSlide, slideDurations[0]);
 
 
             /* --- FALLING '囍' LOGIC --- */
