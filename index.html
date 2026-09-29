@@ -132,23 +132,27 @@
         
         <!-- TRANG 1: Tên và Ngày tháng -->
         <div class="slide slide-active w-full" id="slide-1">
-            <h1 class="font-playfair text-[6vh] text-maroon font-semibold tracking-wide mb-[2vh]">
+            <h1 class="font-playfair text-[6vh] text-maroon font-semibold tracking-wide mb-[4vh]">
                 Lễ Dạm Ngõ
             </h1>
             
-            <div class="w-full flex flex-col items-center justify-center font-cursive text-maroon text-[15vh] leading-none">
-                <!-- Đã tăng lề dưới mb-[4vh] để tách Cao Bằng xa hơn -->
-                <div class="w-full text-center pr-[20vw] mb-[4vh]">
+            <!-- Đã sửa lại khối hiển thị tên: dùng transform để lệch vị trí, thêm whitespace-nowrap để cấm rớt dòng -->
+            <div class="w-full flex flex-col items-center justify-center font-cursive text-maroon text-[15vh] leading-none whitespace-nowrap">
+                
+                <!-- Kéo Cao Bằng sang trái bằng transform -->
+                <div class="transform -translate-x-[12vw] mb-[3vh]">
                     Cao Bằng
                 </div>
-                <!-- Đã tăng lề trên dưới my-[6vh] để chữ & có nhiều không gian trống hơn -->
-                <div class="text-[10vh] opacity-80 my-[6vh]">
+                
+                <div class="text-[10vh] opacity-80 my-[3vh]">
                     &
                 </div>
-                <!-- Đã tăng lề trên mt-[4vh] để tách Thanh Thúy xa hơn -->
-                <div class="w-full text-center pl-[20vw] mt-[4vh]">
+                
+                <!-- Kéo Thanh Thúy sang phải bằng transform -->
+                <div class="transform translate-x-[12vw] mt-[3vh]">
                     Thanh Thúy
                 </div>
+
             </div>
 
             <div class="mt-[6vh] text-center text-maroon opacity-80 font-sans tracking-widest leading-relaxed">
